@@ -1,1 +1,15 @@
-<p>card-lists works!</p>
+<div class="search">
+  <input class="search__input" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search"/>
+</div>
+<ul class="listcard flex flex-wrap">
+  <li *ngFor="let card of cards | filter: searchText" class="card">
+  <a [routerLink]="'/cards/'">
+      <h2 class="card__name">{{ card.name }}</h2>
+      <span class="card__id">ID: {{card.id}} | Tipo {{card.types}}</span>
+      <figure>
+      <img [src]="card.imageUrl" [alt]="card.name">
+      </figure>
+    </a>
+
+  </li>
+</ul>
