@@ -7,9 +7,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HomeComponent } from './pages/home/home.component';
+import { DetailsComponent } from './pages/details/details.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +23,8 @@ import { AppComponent } from './app.component';
     Ng2SearchPipeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
