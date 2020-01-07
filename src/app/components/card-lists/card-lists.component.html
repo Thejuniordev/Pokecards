@@ -1,7 +1,7 @@
 <div class="search">
   <input class="search__input" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search"/>
 </div>
-<ul class="listcard flex flex-wrap">
+<ul class="listcard flex flex-wrap" data-simplebar>
   <li *ngFor="let card of cards | filter: searchText" class="card">
   <a [routerLink]="'/cards/'">
       <h2 class="card__name">{{ card.name }}</h2>

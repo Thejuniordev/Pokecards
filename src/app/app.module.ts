@@ -11,15 +11,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { CardListsComponent } from './components/card-lists/card-lists.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DetailsComponent,
-    CardListsComponent,
-    SearchComponent
+    CardListsComponent
   ],
   imports: [
     BrowserModule,
