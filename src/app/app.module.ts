@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { CardListsComponent } from './components/card-lists/card-lists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardListsComponent
   ],
   imports: [
     BrowserModule,
