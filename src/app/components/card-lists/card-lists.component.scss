@@ -1,6 +1,7 @@
 @import "../../../styles/variables.scss";
 .search{
   width: 100%;
+  max-width: 500px;
   margin: 20px 0 0;
   position: relative;
   &__input{
@@ -51,7 +52,7 @@
     }
     &:hover{
       background: #111d5e;
-      box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.42);
+      box-shadow: 2px 2px 24px 6px rgba(0, 0, 0, 0.42);
     }
   }
 }

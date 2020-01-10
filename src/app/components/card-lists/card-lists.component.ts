@@ -1,6 +1,8 @@
-import { PokeserviceService } from './../../services/pokeservice.service';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
+
+import { PokeserviceService } from './../../services/pokeservice.service';
 @Component({
   // tslint:disable-next-line: component-selector
   selector: 'card-lists',
@@ -11,7 +13,6 @@ export class CardListsComponent implements OnInit {
 
   cards: Array<any> = new Array();
   searchText: string;
-  loupeImage = '../../../assets/images/loupe.svg';
 
   constructor(private pokeserviceService: PokeserviceService) { }
 

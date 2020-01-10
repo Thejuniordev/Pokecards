@@ -6,9 +6,8 @@ import { DetailsComponent } from './pages/details/details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'detail/:id', component: DetailsComponent},
+  { path: 'details/:id', component: DetailsComponent},
 
-  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

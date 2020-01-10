@@ -1,0 +1,53 @@
+<section class="details">
+  <figure class="card">
+    <img [src]="dataCard.imageUrlHiRes" alt="{{dataCard.name}}">
+  </figure>
+  <div class="container">
+
+    <div class="details__content">
+      <h1 class="details__content-title">{{ dataCard.name }}</h1>
+    <span class="details__content-subtitle">ID: {{dataCard.id}} | {{dataCard.types}}</span>
+
+    <div class="details__content--list">
+      <ul class="attacks">
+        <li class="attacks__cost" >
+          <h3 class="title">Mana Cost</h3>
+        <span class="title__value">{{ dataCard.retreatCost }}</span>
+        </li>
+        <li class="attacks__name">
+          <h3 class="title">Attack Name</h3>
+        <span class="title__value">{{ dataCard.attacks["0"].name }}</span>
+        </li>
+        <li class="attacks__damage">
+          <h3 class="title">Damage</h3>
+        <span class="title__value">{{ dataCard.attacks["0"].damage }}</span>
+        </li>
+        <li class="attacks__description">
+          <h3 class="title">Description</h3>
+        <span class="title__value">{{ dataCard.attacks["0"].text }}</span>
+        </li>
+      </ul>
+
+      <ul class="resistances">
+        <h3 class="title">Resistence</h3>
+        <li class="resistances__type">
+        <span class="title__value">{{ dataCard.resistances["0"].type }}</span>
+        </li>
+        <li class="resistances__value">
+        <span class="title__value">{{ dataCard.resistances["0"].value }}</span>
+        </li>
+      </ul>
+
+      <ul class="weaknesses">
+        <h3 class="title">Weaknesses</h3>
+        <li class="weaknesses__type">
+        <span class="title__value">{{ dataCard.weaknesses["0"].type}}</span>
+        </li>
+        <li class="weaknesses__value">
+          <span class="title__value">{{ dataCard.weaknesses["0"].value}}</span>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>

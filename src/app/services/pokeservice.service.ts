@@ -15,7 +15,9 @@ export class PokeserviceService {
     return this.http.get(`${this.cardsUrl}`);
   }
 
-  cardsDetails(cardId) {
-    return this.http.get(`${this.cardsUrl}/${cardId}`);
+  cardsDetails(): Observable<any> {
+    return this.http.get(`${this.cardsUrl}`);
   }
+
+
 }
