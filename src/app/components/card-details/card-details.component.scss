@@ -1,13 +1,28 @@
+@import "../../../styles/variables.scss";
 .details{
+  margin-bottom: 50px;
+  @media (min-width: 739px){
+    margin-top: 40px;
+  }
   .card{
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 425px;
     height: 430px;
     overflow: hidden;
     border-radius: 0 0 20px 20px;
     margin-bottom: 20px;
     box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%);
+    background-position: 26% 150%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    z-index: 1;
+    @media (min-width: 739px){
+      margin-left: auto;
+      margin-right: 10%;
+      height: auto;
+    }
     &::before{
       content: '';
       position: absolute;
@@ -16,6 +31,9 @@
       height: 430px;
       opacity: 1;
       mix-blend-mode: color-dodge;
+      @media (min-width: 739px){
+        height: 100%;
+      }
     }
     &::after{
       content: '';
@@ -27,16 +45,56 @@
       background-image: linear-gradient(
         115deg,
         transparent 0%,
-        rgb(0, 231, 255) 30%,
-        rgb(255, 0, 231) 70%,
-        transparent 100%
-      );
-      background-position: 0% 0%;
+        transparent 25%,
+        rgba(0, 231, 255,0.7) 45%,
+        rgba(255, 0, 231,0.7) 55%,
+        transparent 70%,
+        transparent 100%);
+      background-position: 51% 70%;
       background-repeat: no-repeat;
       background-size: 300% 300%;
       mix-blend-mode: color-dodge;
-      opacity: 0.2;
+      opacity: 1;
       z-index: 1;
+      animation: none;
+      transition: none;
+
+    }
+  }
+  .details__content{
+    background: $color__one;
+    padding: 10px;
+    border-radius: 10px;
+    @media(min-width: 739px){
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      max-width: 720px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media(min-width: 1399px){
+      max-width: 1000px;
+    }
+    @media(min-width: 1559px){
+      max-width: 80%;
+    }
+    &-title{
+      color: $white;
+    }
+    &-subtitle{
+      color: $white;
+    }
+    &--list{
+      margin-top: 30px;
+      .title{
+        color: $white;
+        &__value{
+          color: $color__four;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }
